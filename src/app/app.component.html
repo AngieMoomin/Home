@@ -1,0 +1,55 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+
+<div class="container menu-top">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="#">
+    <img src="../assets/Logo3.png" />
+    </a>
+    <button class="navbar-toggler" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+        </li>
+        <li ngbDropdown class="nav-item dropdown">
+          <a ngbDropdownToggle class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Services
+          </a>
+          <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Réparation</a>
+            <a class="dropdown-item" href="#">Installation</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">On verra quoi d'autre</a>
+          </div>
+        </li>
+        <li ngbDropdown class="nav-item dropdown">
+          <a ngbDropdownToggle class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Produits
+          </a>
+          <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Volets</a>
+            <a class="dropdown-item" href="#">Télécommandes (domotique)</a>
+
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Nous contacter</a>
+        </li>
+      </ul>
+      <form class="form-inline  my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+</div>
+
+<div class="main-content">
+  <app-dashboard></app-dashboard>
+</div>
+
+
+
