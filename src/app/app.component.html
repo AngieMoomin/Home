@@ -3,7 +3,7 @@
 
 <div class="container menu-top">
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #e3f2fd;">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" routerLink="/dashboard">
     <img src="../assets/Logo3.png" />
     </a>
     <button class="navbar-toggler" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,7 +15,7 @@
           <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
         </li>
         <li ngbDropdown class="nav-item dropdown">
-          <a ngbDropdownToggle class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a ngbDropdownToggle class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Services
           </a>
           <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -26,11 +26,11 @@
           </div>
         </li>
         <li ngbDropdown class="nav-item dropdown">
-          <a ngbDropdownToggle class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a ngbDropdownToggle class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Produits
           </a>
           <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Volets</a>
+            <a class="dropdown-item" routerLink="/volets">Volets</a>
             <a class="dropdown-item" href="#">Télécommandes (domotique)</a>
 
           </div>
@@ -48,7 +48,7 @@
 </div>
 
 <div class="main-content">
-  <app-dashboard></app-dashboard>
+  <router-outlet></router-outlet>
 </div>
 
 

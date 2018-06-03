@@ -1,3 +1,92 @@
+
+
+<h1> Volets </h1>
+
+<div class="volets-space">
 <p>
-  volets works!
+  Pour mieux vous aider à choisir votre volet, suivez les pas suivants. Nous allons vous guider et vous pouvez
+  même garder votre configuration pour continuer après si vous voulez !
 </p>
+
+  <div class="stepper">
+  <mat-vertical-stepper #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Je décris mon projet</ng-template>
+
+          <!--<input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>-->
+          <!-- (click)="onSelect(hero)-->
+
+          <mat-card class="example-card">
+            <mat-card-header>
+              <mat-card-title>Volet seul</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="https://statics.lapeyre.fr/img/catalogue/zoom1/722/108/201722108.jpg" alt="Photo d'un volet">
+            <mat-card-content>
+
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button (click)="onSelect(11)">SELECT</button>
+            </mat-card-actions>
+          </mat-card>
+
+
+          <mat-card class="example-card">
+            <mat-card-header>
+              <mat-card-title>Volet avec fenêtre</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="https://www.batiproduits.com/img/volet-coulissant-persienne-en-bois-massif-40-mm-volet-coulissant-persienne-002419648-product_maxi.jpg" alt="Photo d'un volet">
+            <mat-card-content>
+
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button (click)="onSelect(12)"> SELECT</button>
+            </mat-card-actions>
+          </mat-card>
+
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Je précise mon implantation</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Address" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="thirdFormGroup">
+      <form [formGroup]="thirdFormGroup">
+        <ng-template matStepLabel>Je définis la dimension approximative de ma baie</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Address" formControlName="thirdCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      You are now done.
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-vertical-stepper>
+  </div>
+
+  <div class="stepperDetail">
+    <app-volet-detail [volet]="selectedVolet"></app-volet-detail>
+  </div>
+
+
+</div>

@@ -1,0 +1,26 @@
+
+h1{
+  text-align: center;
+}
+
+div.volets-space{
+  width: 80%;
+  margin-left : 8%;
+
+}
+
+div.stepperDetail, div.stepper{
+  width: 50%;
+  display: inline-grid;
+}
+
+.example-card {
+  max-width: 200px;
+  display: inline-block;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
